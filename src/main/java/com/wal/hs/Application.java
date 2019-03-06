@@ -18,9 +18,7 @@ public class Application {
 	@Scheduled(initialDelay=10000,fixedDelay=20000)
 	public void clearCache()
 	{
-		System.out.println("clearing cache");
 		evitAllCache();
-		System.out.println("cahce cleared");
 	}
 	
 	@CacheEvict(allEntries=true)

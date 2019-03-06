@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-public class CryptoResponse implements Serializable{
+public class CryptoResponse implements Serializable {
 
 	/**
 	 * 
@@ -23,6 +23,5 @@ public class CryptoResponse implements Serializable{
 	public void setEncryptedValue(String encryptedValue) {
 		this.encryptedValue = encryptedValue;
 	}
-	
-	
+
 }
