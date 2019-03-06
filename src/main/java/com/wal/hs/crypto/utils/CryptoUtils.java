@@ -9,8 +9,12 @@ import java.util.Base64;
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class CryptoUtils {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(CryptoUtils.class);
 	private static SecretKeySpec secretKey;
 	private static byte[] key;
 
@@ -32,6 +36,7 @@ public class CryptoUtils {
 	}
 
 	public static String encrypt(String strToEncrypt, String k) {
+		LOGGER.debug("Setting key for encrypt : {}", k);
 
 		try {
 			setKey(k);
@@ -48,11 +53,10 @@ public class CryptoUtils {
 	}
 
 	public static String decrypt(String decryptValue, String key) {
+		LOGGER.debug("Setting key for decrypt : {}", key);
+
 		try {
-			
-			
-			System.out.println("@@@@@@@@@@@@@@@@@@@@@" + decryptValue);
-			System.out.println("@@@@@@@@@@@@@@@@@@@@2" + key);
+
 			setKey(key);
 			Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
 
