@@ -17,9 +17,9 @@ import com.wal.hs.crypto.utils.CryptoUtils;
 public class CryptoServiceBoImpl implements CryptoServiceBo {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(CryptoServiceBoImpl.class);
-	@Autowired
+	/*@Autowired
 	private CryptoDAO cryptoDAO;
-
+*/
 	@Override
 	@Cacheable("encrypt")
 	public CryptoResponse encrypt(CryptoRequest request) {
