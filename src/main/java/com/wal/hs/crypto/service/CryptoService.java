@@ -9,4 +9,5 @@ public interface CryptoService {
 
 	Response encrypt(CryptoRequest request);
 	Response decrypt(DecryptRequest request);
+	Response ping();
 }
