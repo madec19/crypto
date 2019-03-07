@@ -24,7 +24,7 @@ public class CryptoServiceBoImpl implements CryptoServiceBo {
 	@Cacheable("encrypt")
 	public CryptoResponse encrypt(CryptoRequest request) {
 		LOGGER.info("Inside Business class");
-		cryptoDAO.insertAcc(request.getAccountNo());
+		//cryptoDAO.insertAcc(request.getAccountNo());
 		CryptoResponse response = new CryptoResponse();
 		// slowLookupOperation();
 		String encryptedValue = CryptoUtils.encrypt(request.getAccountNo(), "manoj");
